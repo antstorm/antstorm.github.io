@@ -1,0 +1,12 @@
+# Site settings
+title: ANTStorm
+email: antstorm@gmail.com
+description: >
+  Still coming up
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://antstorm.github.io" # the base hostname & protocol for your site
+twitter_username: antstorm
+github_username:  antstorm
+
+# Build settings
+markdown: kramdown

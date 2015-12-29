@@ -1,20 +1,35 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  {% include head.html %}
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ site.description }}">
 
-  <body>
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-    {% include header.html %}
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
+    ga('create', 'UA-11370103-7', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+<body>
+  {% include header.html %}
+
+  <div class="page-content">
+    <div class="wrapper">
+      {{ content }}
     </div>
+  </div>
 
-    {% include footer.html %}
-
-  </body>
-
+  {% include footer.html %}
+</body>
 </html>

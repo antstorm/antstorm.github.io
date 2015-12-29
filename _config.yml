@@ -4,7 +4,8 @@ email: antstorm@gmail.com
 description: >
   Freelance full-stack web/iOS developer passionate about robust software architecture, performance and scalability.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://antstorm.github.io" # the base hostname & protocol for your site
+url: 'https://antstorm.github.io' # the base hostname & protocol for your site
+permalink: '/:year/:month/:day/:title.html'
 twitter_username: antstorm
 github_username:  antstorm
 
